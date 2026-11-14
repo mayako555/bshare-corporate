@@ -15,20 +15,21 @@ export default function Home() {
     <div className="overflow-x-hidden pt-20 text-[#333]">
       
       {/* HERO SECTION */}
-      <section className="relative w-full h-[600px] md:h-[750px] bg-[#f8fafc] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
+      <section className="relative w-full md:h-[750px] bg-[#f8fafc] flex flex-col md:flex-row items-center overflow-hidden">
+        <div className="relative w-full aspect-video md:aspect-auto md:h-full md:absolute md:inset-0 z-0">
           <Image 
-            src="/images/hero_generated.jpg" 
-            alt="Hero background" 
+            src="/images/hero-salon-agent.webp"
+            alt="サロとエイジとともに、SALON AGENTの管理画面を指さす女性"
             fill 
-            className="object-cover object-center"
+            className="object-cover object-[70%_center] md:object-center"
+            sizes="100vw"
             priority
           />
           {/* Subtle gradient overlay to make text readable */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent md:w-2/3" />
+          <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-white/70 via-white/20 to-transparent md:w-2/3" />
         </div>
         
-        <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 flex flex-col items-start mt-[-100px]">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 md:py-0 w-full relative z-10 flex flex-col items-start md:mt-[-100px]">
           <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="max-w-xl">
             <h1 className="text-4xl md:text-[56px] font-serif leading-[1.3] text-[#2c3e50] mb-8 font-medium tracking-wide">
               美容の未来を、<br />
@@ -155,7 +156,7 @@ export default function Home() {
       <section className="relative h-[600px] flex overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[#e8eef2] flex w-full">
             <div className="relative w-full md:w-1/2 h-[300px] md:h-full block">
-               <Image src="/images/about_highres.jpg" alt="About" fill className="object-cover object-center" />
+               <Image src="/images/about-city-sky.webp" alt="街並みを背景に青空を見上げる女性" fill className="object-cover object-center" />
                <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
                <div className="absolute top-1/2 -translate-y-1/2 left-8 md:left-16 z-10">
                  <p className="text-white text-3xl md:text-4xl font-serif leading-[1.6] tracking-[0.2em] drop-shadow-md">
